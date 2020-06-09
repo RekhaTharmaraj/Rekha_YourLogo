@@ -14,7 +14,7 @@ import pom.MyStore;
 
 public class TestScripts extends BaseTest
 {
-	@Test(enabled=false)
+	@Test
 	public void AccountCreation() throws InterruptedException
 	{
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
@@ -24,14 +24,14 @@ public class TestScripts extends BaseTest
 		homep.SignInClick();
 		PageVerification.VerifyTitle("Login - My Store");
 		//PageVerification.VerifyWebElement(driver.findElement(By.xpath("//input[@id='email_create']")));
-		homep.setEmail("TestRekha12@gmail.com");
+		homep.setEmail("TestRekha123@gmail.com");
 		homep.CreateActClick();		
 		PageVerification.VerifyTitle("Login - My Store");
 		Actp.MrsClick();
-		Actp.setfName("TestReks");
-		Actp.setlName("Thar");
+		Actp.setfName("TestReka");
+		Actp.setlName("Tharm");
 		Actp.chkEmail();
-		Actp.setpwd("Test123456");
+		Actp.setpwd("Test123451");
 		Actp.setAddress("100 testaddress");
 		Actp.setCity("Edison");
 		GenericUtils.gSelectByVisibleText(driver.findElement(By.id("id_state")), "New Jersey");
@@ -186,7 +186,7 @@ public class TestScripts extends BaseTest
 		PageVerification.VerifyTitle("Order - My Store");			
 	}
 	
-	@Test
+	@Test(enabled=false)
 	public void SignInDuringCheckout()
 	{
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
